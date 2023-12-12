@@ -4,21 +4,37 @@
   padding: 0;
   font-family: "Josefin Sans", sans-serif;
 }
+body {
+  background: linear-gradient(12deg, blue 50%, white);
+  width: 90vw;
+  height: 100vh;
+  overflow: auto;
+}
 
 .container {
-  width: 80%;
+  width: 40%;
   text-align: center;
   margin: 0 auto;
-  padding: 20px;
+  padding-top: 40px;
+  user-select: none;
 }
 
 .add-list {
+  margin: 0 auto;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 input {
   height: 30px;
-  width: 200px;
+  flex: 1;
+  /* width: 200px; */
+  padding-left: 12px;
+  border-radius: 12px;
+  border: none;
+  margin-right: 10px;
 }
 
 #add {
@@ -29,18 +45,42 @@ input {
 
 ul {
   text-align: left;
-  margin: 2px auto;
   width: 40%;
 }
 
+ul span{
+  color: white;
+}
+h1{
+  margin-bottom: 20px;
+  color: white;
+}
 li {
   display: flex;
+  margin-top: 10px;
+  
   justify-content: space-between;
-  text-align: center;
+  align-items: center;
   padding: 10px;
-  background-color: bisque;
-  margin: 10px 0;
+  width: 400px;
+  border: 2px dashed white;
+  border-radius: 20px;
+}
+ #add{
+  border-radius: 20px;
+  text-align: center;
+  border: none;
+  font-size: 20px;
+ }
+
+.removeButton {
+  border: none;
+  padding: 8px;
+  border-radius: 90%;
+  cursor: pointer;
+  color: black;
 }
 
-
-
+.storage {
+  cursor: pointer;
+}

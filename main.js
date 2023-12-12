@@ -28,8 +28,7 @@ function keydetect(e) {
 }
 function createButton() {
   let b = document.createElement("button");
-  b.innerHTML = "remove";
-  b.value = "remove";
+  b.innerHTML = "X";
   b.className = "removeButton";
   return b;
 }
