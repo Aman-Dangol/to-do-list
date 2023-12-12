@@ -1,5 +1,4 @@
 * {
-  /* border: 2px solid red; */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -7,7 +6,6 @@
 }
 
 .container {
-  border: 2px solid red;
   width: 80%;
   text-align: center;
   margin: 0 auto;
@@ -30,7 +28,6 @@ input {
 }
 
 ul {
-  border: 2px solid red;
   text-align: left;
   margin: 2px auto;
   width: 40%;
@@ -39,9 +36,10 @@ ul {
 li {
   display: flex;
   justify-content: space-between;
+  text-align: center;
   padding: 10px;
+  background-color: bisque;
 }
 
-.removeButton{
-  text-decoration: none;
-}
+
+
