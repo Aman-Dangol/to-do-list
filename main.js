@@ -38,12 +38,20 @@ window.addEventListener("click", (e) => {
   if (e.target.className == "removeButton") {
     e.target.parentElement.remove();
   }
-  if (e.target.tagName.className== "LI") {
+  if (e.target.tagName == "LI") {
     console.log(e);
     e.target.children[0].style.textDecoration = "line-through";
   }
   if (e.target.tagName=="SPAN") {
-    e.target.style.textDecoration = "line-through";
+    e.target.style.textDecoration = underlinedOrNor(e.target.style.textDecoration);
   }
 });
 
+function underlinedOrNor(decor){
+    if (decor=="") {
+        return "line-through"
+    }
+    else{
+       return "";
+    }
+}
