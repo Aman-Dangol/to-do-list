@@ -6,7 +6,7 @@
 }
 body {
   background: linear-gradient(12deg, blue 50%, white);
-  width: 90vw;
+  width: 100vw;
   height: 100vh;
   overflow: auto;
 }
@@ -44,32 +44,31 @@ input {
 
 ul {
   text-align: left;
-  width: 40%;
 }
 
-ul span{
+ul span {
   color: white;
 }
-h1{
+h1 {
   margin-bottom: 20px;
   color: white;
 }
 li {
   display: flex;
-  margin: 10px 0 10px 40px;
+  margin: 10px 0 10px 10px;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  width: 400px;
+  width: 90%;
   border: 2px dashed white;
   border-radius: 20px;
 }
- #add{
+#add {
   border-radius: 20px;
   text-align: center;
   border: none;
   font-size: 20px;
- }
+}
 
 .removeButton {
   border: none;
