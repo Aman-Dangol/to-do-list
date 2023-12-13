@@ -41,8 +41,9 @@ window.addEventListener("click", (e) => {
     store();
   }
   if (e.target.tagName == "LI") {
-    console.log(e);
-    e.target.children[0].style.textDecoration = underlinedOrNor(e.target.children[0].style.textDecoration);
+    e.target.children[0].style.textDecoration = underlinedOrNor(
+      e.target.children[0].style.textDecoration
+    );
     store();
   }
   if (e.target.tagName == "SPAN") {
@@ -62,7 +63,7 @@ function underlinedOrNor(decor) {
 }
 
 function store() {
-  console.log(localStorage.setItem("list", unorederedList.innerHTML));
+  localStorage.setItem("list", unorederedList.innerHTML);
 }
 
 function load() {
