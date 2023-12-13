@@ -42,7 +42,7 @@ window.addEventListener("click", (e) => {
   }
   if (e.target.tagName == "LI") {
     console.log(e);
-    e.target.children[0].style.textDecoration = "line-through";
+    e.target.children[0].style.textDecoration = underlinedOrNor(e.target.children[0].style.textDecoration);
     store();
   }
   if (e.target.tagName == "SPAN") {
