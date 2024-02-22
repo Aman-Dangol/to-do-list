@@ -7,7 +7,7 @@
 body {
   background: linear-gradient(12deg, blue 50%, white);
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   overflow: auto;
 }
 
