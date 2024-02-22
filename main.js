@@ -14,13 +14,19 @@ function addList() {
 function createList() {
   // creating an <li></li> element
   let li = document.createElement("li");
-  //   adding a class name
+  let div = document.createElement("div");
+  //   adding a class name to the div
+
+  div.className = "button-container";
+  // adding class name to list
   li.className = "l";
   // adding the value we got from input
   li.innerHTML = `<span>${inputText.value}</span>`;
-  //   creating and adding the a button to the text
-  li.appendChild(createButton());
-
+  //   creating and adding the a remove and edit button to the div element
+  div.appendChild(createEditButton());
+  div.appendChild(createButton());
+  // appending the div element with edit and remove button in the list
+  li.appendChild(div);
   return li;
 }
 function keydetect(e) {
@@ -34,10 +40,16 @@ function createButton() {
   b.className = "removeButton";
   return b;
 }
+function createEditButton() {
+  let b = document.createElement("button");
+  b.innerHTML = "edit";
+  b.className = "editButton";
+  return b;
+}
 inputText.addEventListener("keydown", keydetect);
 window.addEventListener("click", (e) => {
   if (e.target.className == "removeButton") {
-    e.target.parentElement.remove();
+    e.target.parentElement.parentElement.remove();
     store();
   }
   if (e.target.tagName == "LI") {
@@ -69,5 +81,7 @@ function store() {
 function load() {
   unorederedList.innerHTML = localStorage.getItem("list");
 }
+
+function edit() {}
 
 load();

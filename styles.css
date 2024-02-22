@@ -70,6 +70,11 @@ li {
   cursor: pointer;
 }
 
+.button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
 .removeButton {
   border: none;
   padding: 8px;
