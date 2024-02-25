@@ -91,6 +91,7 @@ function edit(button) {
   // editing
   button.parentElement.parentElement.remove();
   noteWrite.value = editValue;
+  noteWrite.focus();
 }
 
 load();
