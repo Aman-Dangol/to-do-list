@@ -1,6 +1,7 @@
 let inputText = document.querySelector("input");
 let unorederedList = document.querySelector(".list");
 let id = 0;
+let noteWrite = document.getElementById("noteWrite");
 
 function addList() {
   if (inputText.value == "") {
@@ -44,6 +45,9 @@ function createEditButton() {
   let b = document.createElement("button");
   b.innerHTML = "edit";
   b.className = "editButton";
+  b.onclick = () => {
+    edit(b);
+  };
   return b;
 }
 inputText.addEventListener("keydown", keydetect);
@@ -82,6 +86,11 @@ function load() {
   unorederedList.innerHTML = localStorage.getItem("list");
 }
 
-function edit() {}
+function edit(button) {
+  let editValue = button.parentElement.parentElement.children[0].innerHTML;
+  // editing
+  button.parentElement.parentElement.remove();
+  noteWrite.value = editValue;
+}
 
 load();
