@@ -37,24 +37,37 @@ function keydetect(e) {
 }
 function createButton() {
   let b = document.createElement("button");
-  b.innerHTML = "X";
+  b.innerHTML = `<span class="material-symbols-outlined removeButton">
+  delete
+  </span>`;
   b.className = "removeButton";
   return b;
 }
 function createEditButton() {
   let b = document.createElement("button");
-  b.innerHTML = "edit";
+  b.innerHTML = `<span class="material-symbols-outlined">
+edit
+</span>`;
+
   b.className = "editButton";
+  b.children[0].onclick = () => {
+    console.log("span");
+    edit(b);
+  };
   b.onclick = () => {
+    console.log("button");
     edit(b);
   };
   return b;
 }
 inputText.addEventListener("keydown", keydetect);
 window.addEventListener("click", (e) => {
+  if (e.target.classList[1] == "removeButton") {
+    e.target.parentElement.parentElement.parentElement.remove();
+    store();
+  }
   if (e.target.className == "removeButton") {
     e.target.parentElement.parentElement.remove();
-    store();
   }
   if (e.target.tagName == "LI") {
     e.target.children[0].style.textDecoration = underlinedOrNor(

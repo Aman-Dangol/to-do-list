@@ -88,3 +88,7 @@ li {
   cursor: pointer;
   padding: 0;
 }
+
+.material-symbols-outlined {
+  color: black;
+}
