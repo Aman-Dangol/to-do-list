@@ -93,5 +93,4 @@ function edit(button) {
   noteWrite.value = editValue;
   noteWrite.focus();
 }
-
 load();
