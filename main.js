@@ -37,20 +37,16 @@ function keydetect(e) {
 }
 function createButton() {
   let b = document.createElement("button");
-  b.innerHTML = `<span class="material-symbols-outlined removeButton">
-  delete
-  </span>`;
+  b.innerHTML = 'delete'
   b.className = "removeButton";
   return b;
 }
 function createEditButton() {
   let b = document.createElement("button");
-  b.innerHTML = `<span class="material-symbols-outlined">
-edit
-</span>`;
+  b.innerHTML = "edit";
 
   b.className = "editButton";
-  b.children[0].onclick = () => {
+  b.children.onclick = () => {
     console.log("span");
     edit(b);
   };

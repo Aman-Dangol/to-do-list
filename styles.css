@@ -79,7 +79,7 @@ li {
 .removeButton {
   border: none;
   padding: 8px;
-  border-radius: 90%;
+  border-radius: 9%;
   cursor: pointer;
   color: black;
 }
@@ -87,8 +87,4 @@ li {
 .storage {
   cursor: pointer;
   padding: 0;
-}
-
-.material-symbols-outlined {
-  color: black;
 }
